@@ -1,0 +1,2 @@
+midi_file_name  Soprano,Alto,Tenor,Bas,Metronome    Metronome
+midi_file_name_2    S1,S2,A1,A2,T1,T2,B1,B2,m   m
