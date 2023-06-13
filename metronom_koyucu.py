@@ -1,5 +1,6 @@
 import mido
 import os
+from funcs import metronom_volume_value, set_track_volume
 
 
 midi_file_list = []
@@ -84,7 +85,7 @@ for midi_file in midi_file_list:
             track.append(mido.Message('note_on', note=76, velocity=0, time=sig_time))
 
         sig_ind += 1
-
+    set_track_volume(track, metronom_volume_value)
     #for m in mid.tracks[0]:
     #    print(m)
     #print(f"{midi_file[:-4]}_metronomlu.mid")

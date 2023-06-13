@@ -1,6 +1,10 @@
 import subprocess, os
 import mido
 
+kısık_volume_value = 25
+açık_volume_value = 100
+metronom_volume_value = 35
+
 # Some midi files use a message with type note_on and 0 velocity instead of a message type note_off:
 def signal_is_note_off(msg):
     return msg.type == "note_off" or (msg.type == "note_on" and msg.velocity == 0)

@@ -1,9 +1,6 @@
 from mido import MidiFile
-from funcs import midi2mp3, set_track_volume, create_folder, get_file_name_str, Eser
+from funcs import midi2mp3, set_track_volume, create_folder, get_file_name_str, Eser, kısık_volume_value, açık_volume_value
 import os
-
-kısık_volume_value = 25
-açık_volume_value = 100
 
 #dosyaları mp3e çevirelim mi diye sor
 mp3_input = input("Bu program içinde bulunduğu dosyadaki bütün .mid dosyaları için birer klasör açar, ve bu klasörlere dosyayı partilerine ayrılmış şekilde .mid ve (istersen) .mp3 formatlarında kaydeder.\n\nDosyalar mp3'e de çevrilsin mi? (y/n)\n")
