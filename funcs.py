@@ -30,6 +30,10 @@ def create_folder(file_name):
 def midi2mp3(midi_file):
     file_name = midi_file.split(".", 1)[0]
     subprocess.call(['fluidsynth/bin/fluidsynth.exe', '-ni', '-g', '4', 'sf1.sf3', midi_file, '-F', f'{file_name}.mp3', '-r', '44100'])
+    #subprocess.call(["fluidsynth/bin/fluidsynth.exe", "-T", "raw", "-F", "-", "sf1.sf3", midi_file,
+    #                 "|", "ffmpeg", "-y", "-f", "s32le", "-i", "-", "-b:a 192k", f'{file_name}.mp3'])
+    #bunu da dene şu anki 20 mblik büyük dosyalar yapıyo
+    #ffmpeg indirmen falan lazım bi ara uğraşırsın
 
 eser_partileri_file = open("eser_partileri.txt", "r")
 eser_partileri_lines = eser_partileri_file.read().split("\n")

@@ -3,3 +3,5 @@ Include/
 Lib/
 *.mid
 Scripts/
+*.zip
+*_Midi/
